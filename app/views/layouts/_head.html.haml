@@ -1,0 +1,9 @@
+%head
+  %meta{:charset => "UTF-8"}
+  %title reasonable
+  = stylesheet_link_tag "blueprint/screen", :media => "screen, projection"
+  = stylesheet_link_tag "blueprint/print", :media => "print"
+  /[if lt IE 8]
+    = stylesheet_link_tag "blueprint/ie", :media => "screen, projection"
+  = stylesheet_link_tag "application"
+  = csrf_meta_tag

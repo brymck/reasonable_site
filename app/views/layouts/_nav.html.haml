@@ -1,0 +1,6 @@
+%nav
+  %ul
+    - %w(categories reports trolls users).each do |model|
+      %li= link_to_unless_current model.humanize, { :controller => model }
+    - if admin?
+      %li= link_to "Logout", logout_path

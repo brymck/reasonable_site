@@ -1,0 +1,11 @@
+.bundle
+.DS_Store
+.redcar
+.sasscache
+*.dat
+*.log
+db/*.sqlite3
+log/*.log
+doc/
+log/
+tmp/

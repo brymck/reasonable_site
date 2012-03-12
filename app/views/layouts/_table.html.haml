@@ -1,0 +1,15 @@
+- admin_attrs ||= []
+- attrs += admin_attrs if admin?
+%table
+  %thead
+    %tr
+      - attrs.each do |attr|
+        %th= attr.to_s.humanize
+  %tbody
+    - objects.each_with_index do |object|
+      %tr
+        - attrs.each_with_index do |attr, index|
+          - if index == 0
+            %td= link_to object.send(attr), object
+          - else
+            %td= object.send(attr)

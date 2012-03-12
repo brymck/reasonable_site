@@ -1,0 +1,9 @@
+!!! 5
+%html
+  = render :partial => "layouts/head"
+  %body
+    .container
+      = render :partial => "layouts/header"
+      = render :partial => "layouts/nav"
+      = yield
+      = render :partial => "layouts/footer"

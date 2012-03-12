@@ -1,0 +1,9 @@
+*.xcf
+.autotest
+.git
+.rspec
+doc
+features
+spec
+test
+README.md
