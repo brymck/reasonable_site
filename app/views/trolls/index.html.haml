@@ -1,4 +1,5 @@
-= render :partial => "layouts/table",
-         :locals => { :attrs       => [:text, :category],
-                      :admin_attrs => [:score],
-                      :objects     => @trolls }
+- cache :trolls, :expires_in => 30.minutes do
+  = render :partial => "layouts/table",
+           :locals => { :attrs       => [:text, :category],
+                        :admin_attrs => [:score],
+                        :objects     => @trolls }
